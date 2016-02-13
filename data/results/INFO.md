@@ -1,0 +1,1 @@
+This directory stores the following files: .result (with training and test results), .training (having the training evolution, readable with utils.py!), .param (storing all the deep learning parameters used for each concrete experiment) and .npz (where the best trained deep learning model is stored).
