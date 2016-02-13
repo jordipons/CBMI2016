@@ -23,7 +23,7 @@ Lasagne is already in a folder that you can download together with MIRdl, to ins
 - *utils.py*: it allows visualizing the training results (*./data/results*).
 
 **Reproducing the paper**
-- run: *runMIRdl_spectrogramsClassification.py*. There, you can simply set the parameters and choose the architecture to use. You will be able to reproduce all the results provided in the paper.
+- run: *runMIRdl_spectrogramsClassification.py*. There, you can simply set the parameters and choose the architecture you want to use according to the paper. You will be able to reproduce all the provided results. The Ballroom dataset is also uploaded to this GitHub repository, after downloading it and installing the dependencies the experiments are ready to run.
 
 **Steps for using MIRdl**
 - **0.0)** Install.
