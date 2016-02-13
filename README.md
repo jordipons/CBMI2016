@@ -1,8 +1,5 @@
 Deep learning for music information retrieval
 -----------------------------
-
-This library is work in progress, use it at your own risk. I'm open to feedback!
-
 It is build using python on Lasagne-Theano for deep learning and Essentia for feature extraction.
 Currently, MIRdl is for easily doing music classification using any deep learning architecture available on Lasagne or Theano.
 
@@ -19,11 +16,14 @@ Lasagne is already in a folder that you can download together with MIRdl, to ins
 - *./data/results*: this directory stores the following files: **.result** (with training and test results), **.training** (having the training evolution, readable with utils.py!), **.param** (storing all the deep learning parameters used for each concrete experiment) and the **.npz** (where the best trained deep learning model is stored).
  
 **Important scripts**
-- *runMIRdl.py*: where the network architecture is selected, you can also set the input and training parameters.
+- *runMIRdl_spectrogramsClassification.py*: where the network architecture is selected, you can also set the input and training parameters.
 - *buildArchitecture.py*: where the Lasagne-Theano network architecture is set.
 - *load_datasets.py*: where audios are loaded, formatted and normalized to be fed into the net. 
 - *MIRdl.py*: main part of the library where the training happens.
 - *utils.py*: it allows visualizing the training results (*./data/results*).
+
+**Reproducing the paper**
+- run: *runMIRdl_spectrogramsClassification.py*. There, you can simply set the parameters and the architecture to use.
 
 **Steps for using MIRdl**
 - **0.0)** Install.
