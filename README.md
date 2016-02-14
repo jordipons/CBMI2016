@@ -49,9 +49,4 @@ For example, for the GTZAN dataset (http://marsyasweb.appspot.com/download/data_
 
 - **5)** *[Optional]* Visualize what the net has learned with *utils.py*.  
 
-**Future features**
-- Autoencoders support.
-- AcousticBrainz.org support.
-
-
 
