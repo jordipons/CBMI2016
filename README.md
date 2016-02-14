@@ -10,6 +10,8 @@ Requires having Lasagne-Theano (http://lasagne.readthedocs.org/en/latest/user/in
 Lasagne is already in a folder that you can download together with MIRdl, to install Theano do: 
 > sudo pip install --upgrade https://github.com/Theano/Theano/archive/master.zip
 
+Dependencies: numpy and scipy.
+
 **Important folders**
 - *./data/datasets*: the library expects to have the dataset divided by folders that represent the tag to be predicted. 
 - *./data/preloaded*: this directory contains the pickle files storing the datasets in a format readable for the library. The name of the pickle file contains all the parameters used for computing it.
@@ -23,7 +25,7 @@ Lasagne is already in a folder that you can download together with MIRdl, to ins
 - *utils.py*: it allows visualizing the training results (*./data/results*).
 
 **Reproducing the paper**
-- run: *runMIRdl_spectrogramsClassification.py*. There, you can simply set the parameters and choose the architecture you want to use according to the paper. You will be able to reproduce all the provided results. The Ballroom dataset is also uploaded to this GitHub repository, after downloading it and installing the dependencies the experiments are ready to run.
+- run: *runMIRdl_spectrogramsClassification.py*. There, you can simply set the parameters and choose the architecture you want to use according to the paper: 'blackbox' for *Black-box*, 'time' for *Time*, 'frequency' for *Frequency*, 'mergeTimeFrequency' for *Time-Frequency* and 'loadMergeTimeFrequency' for *Time-FrequencyInit*. You will be able to reproduce all the results provided in the paper. The Ballroom dataset is also uploaded to this GitHub repository, after downloading it and installing the dependencies the experiments are ready to run. The *Time* and *Frequncy* models to initialize the *Time-FrequencyInit* architecture are also provided in *./data/preloaded*.
 
 **Steps for using MIRdl**
 - **0.0)** Install.
