@@ -104,7 +104,7 @@ def loadMergeTimeFrequency(input_var,parameters):
     # load best model
     import numpy as np
 
-    name='./data/preloaded/init/Time'+str(parameters['currentFold']+1)
+    name='./data/preloaded/Time_32_1-60_40-1'
     with np.load(name+'.npz') as f:
         param_values = [f['arr_%d' % i] for i in range(len(f.files))]
     lasagne.layers.set_all_param_values(network["4time"], param_values)
@@ -120,7 +120,7 @@ def loadMergeTimeFrequency(input_var,parameters):
 
     # load best model
     import numpy as np
-    name='./data/preloaded/init/Frequency'+str(parameters['currentFold']+1)
+    name='./data/preloaded/Frequency_32_32-1_1-80'
     with np.load(name+'.npz') as f:
         param_values = [f['arr_%d' % i] for i in range(len(f.files))]
     lasagne.layers.set_all_param_values(network["4frequency"], param_values)
