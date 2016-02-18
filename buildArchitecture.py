@@ -1,4 +1,5 @@
 import lasagne
+import numpy as np
 
 def buildNet(input_var, parameters):
     'Select a deep learning architecture'
@@ -76,8 +77,6 @@ def mergeTimeFrequency(input_var,parameters):
     network["3frequencyReshaped"]=lasagne.layers.ReshapeLayer(network["3frequency"],([0],[1],[3],[2]))
 
     network["3"]=lasagne.layers.ConcatLayer([network["3time"], network["3frequencyReshaped"]], axis=3, cropping=None)
-
-
     # feed-forward layer
     network["4"] = lasagne.layers.DenseLayer(lasagne.layers.dropout(network["3"], p=parameters['DL']['dropout_p']),num_units=parameters['DL']['num_dense_units'],nonlinearity=parameters['DL']['nonlinearity'])
     # output layer
@@ -102,8 +101,6 @@ def loadMergeTimeFrequency(input_var,parameters):
     network["4time"] = lasagne.layers.DenseLayer(lasagne.layers.dropout(network["3time"], p=parameters['DL']['dropout_p']),num_units=int(parameters['DS']['numOutputNeurons']),nonlinearity=lasagne.nonlinearities.softmax)
 
     # load best model
-    import numpy as np
-
     name='./data/preloaded/init/Time'+str(parameters['currentFold']+1)
     with np.load(name+'.npz') as f:
         param_values = [f['arr_%d' % i] for i in range(len(f.files))]
@@ -119,7 +116,6 @@ def loadMergeTimeFrequency(input_var,parameters):
     network["4frequency"] = lasagne.layers.DenseLayer(lasagne.layers.dropout(network["3frequency"], p=parameters['DL']['dropout_p']),num_units=int(parameters['DS']['numOutputNeurons']),nonlinearity=lasagne.nonlinearities.softmax)
 
     # load best model
-    import numpy as np
     name='./data/preloaded/init/Frequency'+str(parameters['currentFold']+1)
     with np.load(name+'.npz') as f:
         param_values = [f['arr_%d' % i] for i in range(len(f.files))]

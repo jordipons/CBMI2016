@@ -1,7 +1,7 @@
-Deep learning for music information retrieval
+Deep learning for music information retrieval: CBMI2016 paper
 -----------------------------
 It is build using python on Lasagne-Theano for deep learning and Essentia for feature extraction.
-Currently, MIRdl is for easily doing music classification using any deep learning architecture available on Lasagne or Theano.
+Currently, MIRdl is for easily doing music classification using any deep learning architecture available on Lasagne-Theano.
 
 **Installation**
  
@@ -18,14 +18,13 @@ Dependencies: numpy and scipy.
 - *./data/results*: this directory stores the following files: **.result** (with training and test results), **.training** (having the training evolution, readable with utils.py!), **.param** (storing all the deep learning parameters used for each concrete experiment) and the **.npz** (where the best trained deep learning model is stored).
  
 **Important scripts**
-- *runMIRdl_spectrogramsClassification.py*: where the network architecture is selected, you can also set the input and training parameters.
+- *runCBMI2016.py*: where the network architecture is selected, you can also set the input and training parameters.
 - *buildArchitecture.py*: where the Lasagne-Theano network architecture is set.
 - *load_datasets.py*: where audios are loaded, formatted and normalized to be fed into the net. 
 - *MIRdl.py*: main part of the library where the training happens.
-- *utils.py*: it allows visualizing the training results (*./data/results*).
 
 **Reproducing the paper**
-- run: *runMIRdl_spectrogramsClassification.py*. There, you can simply set the parameters and choose the architecture you want to use according to the paper: 'blackbox' for *Black-box*, 'time' for *Time*, 'frequency' for *Frequency*, 'mergeTimeFrequency' for *Time-Frequency* and 'loadMergeTimeFrequency' for *Time-FrequencyInit*. You will be able to reproduce all the results provided in the paper. The Ballroom dataset is also uploaded to this GitHub repository, after downloading it and installing the dependencies the experiments are ready to run. The *Time* and *Frequncy* models to initialize the *Time-FrequencyInit* architecture are also provided in *./data/preloaded*.
+- run: *runCBMI2016.py*. There, you can simply set the parameters and choose the architecture you want to use according to the paper: 'blackbox' for *Black-box*, 'time' for *Time*, 'frequency' for *Frequency*, 'mergeTimeFrequency' for *Time-Frequency* and 'loadMergeTimeFrequency' for *Time-FrequencyInit*. You will be able to reproduce all the results provided in the paper. The Ballroom dataset is also uploaded to this GitHub repository, after downloading it and installing the dependencies the experiments are ready to run. The *Time* and *Frequncy* models to initialize the *Time-FrequencyInit* architecture are also provided in *./data/preloaded*.
 
 **Steps for using MIRdl**
 - **0.0)** Install.
@@ -43,10 +42,6 @@ For example, for the GTZAN dataset (http://marsyasweb.appspot.com/download/data_
 >./data/datasets/GTZAN/rock
 - **2)** Adapt the *load_datasets.py* function to work using your dataset. We recommend you to use first the GTZAN dataset (already implemented) to understand how it works.
 
-- **3)** Set the *runMIRdl.py* parameters and the deep learning architecture in *buildArchitecture.py*.
+- **3)** Set the *runCBMI2016.py* parameters and the deep learning architecture in *buildArchitecture.py*.
 
-- **4)** Run *runMIRdl.py*.
-
-- **5)** *[Optional]* Visualize what the net has learned with *utils.py*.  
-
-
+- **4)** Run *runCBMI2016.py*.
