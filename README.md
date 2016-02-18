@@ -31,7 +31,7 @@ Dependencies: numpy and scipy.
 
 - **0.1)** Understand this tutorial: http://lasagne.readthedocs.org/en/latest/user/tutorial.html. This library is based on it!
 
-- **1)** Download a dataset. Copy it in *./data/datasets*. The library expects to have the dataset divided by folders that represent the tag to be predicted. 
+- **1)** Download a dataset and copy it in *./data/datasets* (that repository already includes the Ballroom dataset). The library expects to have the dataset divided by folders that represent the tag to be predicted. 
 For example, for the GTZAN dataset (http://marsyasweb.appspot.com/download/data_sets/) the library expects:
 >./data/datasets/GTZAN/blues
 >
