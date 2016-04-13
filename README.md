@@ -16,7 +16,8 @@ Dependencies: numpy and scipy.
 - *./data/datasets*: the library expects to have the dataset divided by folders that represent the tag to be predicted. 
 - *./data/preloaded*: this directory contains the pickle files storing the datasets in a format readable for the library. The name of the pickle file contains all the parameters used for computing it.
 - *./data/results*: this directory stores the following files: **.result** (with training and test results), **.training** (having the training evolution, readable with utils.py!), **.param** (storing all the deep learning parameters used for each concrete experiment) and the **.npz** (where the best trained deep learning model is stored).
- 
+- the public [Ballroom](http://mtg.upf.edu/ismir2004/contest/tempoContest/node5.html) dataset, that is also included in this repository.
+
 **Important scripts**
 - *runCBMI2016.py*: where the network architecture is selected, you can also set the input and training parameters.
 - *buildArchitecture.py*: where the Lasagne-Theano network architecture is set.
@@ -45,3 +46,15 @@ For example, for the GTZAN dataset (http://marsyasweb.appspot.com/download/data_
 - **3)** Set the *runCBMI2016.py* parameters and the deep learning architecture in *buildArchitecture.py*.
 
 - **4)** Run *runCBMI2016.py*.
+
+**Reference**
+
+- Jordi Pons, Thomas Lidy & Xavier Serra (2011, June). "Experimenting with Musically Motivated Convolutional Neural Networks" in 14th International Workshop on Content-Based Multimedia Indexing (CBMI).
+
+**License**
+
+This code is Copyright 2016 Music Technology Group, Universitat Pompeu Fabra. It is released under [Affero GPLv3 license](http://www.gnu.org/licenses/agpl.html).
+
+This code is free software: you can redistribute it and/or modify it under the terms of the Affero GPLv3 as published by the Free Software Foundation. This code is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+This license only aplies to the code written by the authors, third party libraries and datasets are excluded and have its own license.
