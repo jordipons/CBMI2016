@@ -53,8 +53,6 @@ For example, for the GTZAN dataset (http://marsyasweb.appspot.com/download/data_
 
 **License**
 
-This code is Copyright 2016 Music Technology Group, Universitat Pompeu Fabra. It is released under [Affero GPLv3 license](http://www.gnu.org/licenses/agpl.html).
+This code is Copyright 2016 Music Technology Group, Universitat Pompeu Fabra. It is released under [Affero GPLv3 license](http://www.gnu.org/licenses/agpl.html) except for the third party libraries and datasets which have its own licenses.
 
 This code is free software: you can redistribute it and/or modify it under the terms of the Affero GPLv3 as published by the Free Software Foundation. This code is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
-
-This license only aplies to the code written by the authors, third party libraries and datasets are excluded and have its own license.
